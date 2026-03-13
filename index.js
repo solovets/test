@@ -59,7 +59,6 @@ const getFeed = (req, res, next) => {
 app.get('/feed', getFeed, (req, res) => {
     const page = parseInt(req.query.page) || 1;
     const result = res.locals.feed.slice((page - 1) * 10, page * 10);
-    console.log(result.length);
     res.send(result);
 });
 
