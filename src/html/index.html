@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Видео интерфейс</title>
+    <style>
+        <!-- inject:head:css -->
+        <!-- endinject -->
+    </style>
+</head>
+<body>
+    <div id="video-container"></div>
+    <div class="page-indicator" id="pageIndicator"></div>
+    
+    <template id="video-template">
+        <div class="video-wrapper">
+            <video loop playsinline></video>
+            <div class="info">
+                <div class="author"></div>
+                <div class="description"></div>
+                <div class="tags"></div>
+            </div>
+            <div class="play-button"></div>
+            <div class="mute-indicator"></div>
+            <div class="loading-spinner"></div>
+            <div class="error-message">Ошибка загрузки видео</div>
+        </div>
+    </template>
+
+    <template id="messageContainerTemplate">
+        <div class="message-container" id="messageContainer"></div>
+    </template>
+    
+    <template id="lastSlideContentTemplate">
+        <div>
+            <p>🎉 Вы посмотрели все видео! 🎉</p>
+            <button class="replay-button" onclick="window.player.resetToBeginning()">Начать сначала</button>
+        </div>
+    </template>
+
+    <script>
+        <!-- inject:body:js -->
+        <!-- endinject -->
+    </script>
+</body>
+</html>
